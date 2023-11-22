@@ -1,5 +1,5 @@
 let clickCount = 0;
-let musicVolume = 1;
+let musicVolume = 0;
 
 const chocolates = document.getElementById('chocolates');
 const overlay = document.getElementById('overlay');
