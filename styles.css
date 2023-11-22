@@ -4,6 +4,7 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
+    overflow: hidden; /* Prevent scrollbars when snowflakes overflow */
     background-color: #f0f0f0;
 }
 
@@ -25,11 +26,6 @@ body {
     height: 100%;
     background-color: #66ccff; /* Ice blue color */
     pointer-events: none; /* Allow clicking through the overlay */
-}
-
-/* Add this CSS for the snowflakes */
-body {
-    overflow: hidden; /* Prevent scrollbars when snowflakes overflow */
 }
 
 .snowflake {
