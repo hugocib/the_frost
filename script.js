@@ -3,6 +3,10 @@ let musicVolume = 0;
 
 const chocolates = document.getElementById('chocolates');
 const overlay = document.getElementById('overlay');
+const backgroundMusic = document.getElementById('background-music');
+
+// Start playing the music when the game begins
+backgroundMusic.play();
 
 chocolates.addEventListener('click', () => {
     clickCount++;
@@ -14,7 +18,7 @@ chocolates.addEventListener('click', () => {
     // Increase music volume
     musicVolume += 0.1;
     if (musicVolume <= 1) {
-        chocolates.style.opacity = musicVolume;
+        backgroundMusic.volume = musicVolume;
     }
 
     // Check if the game is finished
@@ -30,6 +34,7 @@ function endGame() {
     winText.className = 'win-text';
     document.body.appendChild(winText);
 
-    // Stop further clicks
+    // Stop further clicks and music
     chocolates.style.pointerEvents = 'none';
+    backgroundMusic.pause();
 }
