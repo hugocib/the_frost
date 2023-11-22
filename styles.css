@@ -26,3 +26,26 @@ body {
     background-color: #66ccff; /* Ice blue color */
     pointer-events: none; /* Allow clicking through the overlay */
 }
+
+/* Add this CSS for the snowflakes */
+body {
+    overflow: hidden; /* Prevent scrollbars when snowflakes overflow */
+}
+
+.snowflake {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(100vh);
+    }
+}
